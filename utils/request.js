@@ -1,4 +1,4 @@
-const domain = 'http://1v85r80243.51mypc.cn';
+const domain = 'https://api.jy.zjnan.cn';
 export default function request(api = '') {
   let way = ['get', 'post', 'del', 'put']
   let obj = {}

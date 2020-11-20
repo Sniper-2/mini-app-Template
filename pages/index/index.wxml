@@ -10,7 +10,7 @@
 
   <!-- 顶部banner位置 -->
   <view class="">
-    <image src="../../image/home-banner.jpg" class="width banner-item" mode="widthFix" />
+    <image src="{{ configInfo.homeImg }}" class="width banner-item" mode="widthFix" />
   </view>
 
   <view class="pad-lr-15 home-content">
@@ -66,15 +66,15 @@
     <view class="pad-all-15 f-12 test-paper-theme-color contact-we-box">
       <view class="flex contact-item">
         <span class="contact-lable">联系人：</span>
-        <view class="flex-1">庄经理</view>
+        <view class="flex-1">{{ configInfo.contact }}</view>
       </view>
       <view class="flex contact-item">
         <span class="contact-lable">联系电话：</span>
-        <view class="flex-1">021-67740013 67740130</view>
+        <view class="flex-1">{{ configInfo.tel }}</view>
       </view>
       <view class="flex contact-item">
         <span class="contact-lable">校验地址：</span>
-        <view class="flex-1">上海市沪松路7弄7号</view>
+        <view class="flex-1">{{ configInfo.address }}</view>
       </view>
     </view>
     

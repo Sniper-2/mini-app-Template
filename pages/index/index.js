@@ -6,15 +6,17 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    sessionKey: ''
+    sessionKey: '',
+    configInfo: {}
   },
   //事件处理函数
   bindViewTap: function() {
   },
   onLoad: function () {
+    this.getConfigInfo()
     wx.login({
       success: (res) => {
-        // this.userLogin(res.code)
+        this.userLogin(res.code)
       },
     })
 
@@ -41,7 +43,6 @@ Page({
 
   // 用户授权
   getUserInfo: function(e) {
-    console.log(e)
     let url = e.currentTarget.dataset.url
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -49,7 +50,7 @@ Page({
       hasUserInfo: true
     })
     wx.setStorageSync('userInfo', e.detail.userInfo)
-    // this.savaUserData(e, url)
+    this.savaUserData(e, url)
   },
 
   // 用户授权之后保存用户信息
@@ -64,6 +65,18 @@ Page({
     app.request().get(app.apiList.saveUserData, params).then((res) => {
       // console.log(res)
       wx.navigateTo({  url })
+    })
+  },
+
+  // 获取配置信息
+  getConfigInfo () {
+    app.request().get(app.apiList.getConfigInfo).then((res) => {
+      // console.log(res)
+      app.globalData.configInfo = res
+      this.setData({
+        configInfo: res
+      })
+      console.log(app.globalData.configInfo)
     })
   },
 

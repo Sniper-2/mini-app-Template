@@ -4,7 +4,8 @@ App({
   onLaunch: function () {
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    configInfo: {}
   },
   apiList,
   request

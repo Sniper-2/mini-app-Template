@@ -1,18 +1,21 @@
-// pages/on-line-check/on-line-check.js
+let app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    configInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let configInfo = app.globalData.configInfo
+    this.setData({
+      configInfo
+    })
   },
 
   /**

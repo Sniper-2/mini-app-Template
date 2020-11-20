@@ -3,7 +3,7 @@
 
   <!-- 顶部banner位置 -->
   <view class="">
-    <image src="../../image/on-line-banner.jpg" class="block width banner-item" mode="widthFix" />
+    <image src="{{ configInfo.onlineImg }}" class="block width banner-item" mode="widthFix" />
   </view>
 
   <view class="pad-lr-15 home-content">
@@ -19,9 +19,7 @@
   </view>
 
   <!-- 地图 -->
-  <view>
-    <image src="../../image/map-img.jpg" mode="widthFix" class="width block map-img-item" />
-  </view>
+  <rich-text nodes="{{ configInfo.offlineContent }}"></rich-text>
 
 
 
