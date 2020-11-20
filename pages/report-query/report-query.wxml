@@ -8,7 +8,7 @@
   <view class="pad-lr-20 data-list-box">
     <not-data-ui wx:if="{{ !dataList.length }}"></not-data-ui>
     <view class="mar-tb-10 f-12 theme-black pad-lr-10 bg-white data-item" wx:for="{{ dataList }}" wx:key="index">
-      <view class="item-times">预约检验时间：{{ item.checkTime }}</view>
+      <view class="item-times">预约校验时间：{{ item.checkTime }}</view>
       <view class="item-reservation-info">
         <view class="flex flex-middle reservation-info-data">
           <span class="test-paper-theme-color info-lable">公司名称：</span>
@@ -29,8 +29,14 @@
       </view>
       <view class="item-reservation-info">
         <view class="flex flex-middle reservation-info-data">
-          <span class="test-paper-theme-color info-lable">检验数量：</span>
+          <span class="test-paper-theme-color info-lable">校验数量：</span>
           <span class="flex-1 info-content">{{ item.num }}台</span>
+        </view>
+      </view>
+      <view class="item-reservation-info">
+        <view class="flex flex-middle reservation-info-data">
+          <span class="test-paper-theme-color info-lable">校验方式：</span>
+          <span class="flex-1 info-content">{{ item.online ? '在线校验' : '上门校验' }}</span>
         </view>
       </view>
       <view class="item-reservation-info">

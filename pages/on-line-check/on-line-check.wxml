@@ -15,7 +15,7 @@
         <span class="test-paper-theme-color">校验周期：</span>
         <span class="f-w">1-3天</span>
       </view>
-      <view class="t-c pad-tb-10 font-white f-15 reservation-btn" bind:tap="changePage">上门校验预约</view>
+      <view class="t-c pad-tb-10 font-white f-15 reservation-btn" bind:tap="changePage">在线校验预约</view>
     </view>
 
 

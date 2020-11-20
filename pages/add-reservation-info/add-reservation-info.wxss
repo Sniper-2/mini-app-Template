@@ -8,7 +8,8 @@
 .data-fill-input {
   color: #878787;
   background: #f5f7f8;
-  padding: 20rpx 30rpx;
+  padding: 0rpx 30rpx;
+  height: 80rpx;
   border-radius: 4rpx;
 }
 /* 时间选择 */

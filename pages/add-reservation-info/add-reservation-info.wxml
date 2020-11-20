@@ -43,6 +43,7 @@
     <span class="data-fill-lable ">联系电话</span>
     <input class="flex-1 ml-5 data-fill-input"  
       value="{{ formData.tel }}"
+      type="number"
       bindinput="contentChange"
       data-key="tel"
       placeholder-style="color:#ababab" placeholder="点击填写"/>
@@ -52,6 +53,7 @@
     <input class="flex-1 ml-5 data-fill-input" 
       value="{{ formData.num }}"
       bindinput="contentChange"
+      type="number"
       data-key="num"
       placeholder-style="color:#ababab" placeholder="点击填写"/>
   </view>
