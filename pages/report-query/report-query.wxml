@@ -1,0 +1,44 @@
+<view class="page-container">
+  <view class="bg-white flex pad-tb-15 top-tabs">
+    <view bind:tap="changeTabs" data-index="0" class="flex-1 f-13 pb-5 t-c tabs-item {{ selectTabs == 0 ? 'select-item' : '' }}">预约中</view>
+    <view bind:tap="changeTabs" data-index="1" class="flex-1 f-13 pb-5 t-c tabs-item {{ selectTabs == 1 ? 'select-item' : '' }}">已完成</view>
+  </view>
+
+  <!-- 数据列表 -->
+  <view class="pad-lr-20 data-list-box">
+    <not-data-ui wx:if="{{ !dataList.length }}"></not-data-ui>
+    <view class="mar-tb-10 f-12 theme-black pad-lr-10 bg-white data-item" wx:for="{{ dataList }}" wx:key="index">
+      <view class="item-times">预约检验时间：{{ item.checkTime }}</view>
+      <view class="item-reservation-info">
+        <view class="flex flex-middle reservation-info-data">
+          <span class="test-paper-theme-color info-lable">公司名称：</span>
+          <span class="flex-1 info-content">{{ item.name }}</span>
+        </view>
+      </view>
+      <view class="item-reservation-info">
+        <view class="flex flex-middle reservation-info-data">
+          <span class="test-paper-theme-color info-lable">公司地址：</span>
+          <span class="flex-1 info-content">{{ item.address }}</span>
+        </view>
+      </view>
+      <view class="item-reservation-info">
+        <view class="flex flex-middle reservation-info-data">
+          <span class="test-paper-theme-color info-lable">联系人：</span>
+          <span class="flex-1 info-content">{{ item.contact }}</span>
+        </view>
+      </view>
+      <view class="item-reservation-info">
+        <view class="flex flex-middle reservation-info-data">
+          <span class="test-paper-theme-color info-lable">检验数量：</span>
+          <span class="flex-1 info-content">{{ item.num }}台</span>
+        </view>
+      </view>
+      <view class="item-reservation-info">
+        <view class="flex flex-middle reservation-info-data">
+          <span class="test-paper-theme-color info-lable">联系电话：</span>
+          <span class="flex-1 info-content">{{ item.tel }}</span>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

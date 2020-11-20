@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="page-container">
+
+  <!-- 顶部banner位置 -->
+  <view class="">
+    <image src="../../image/on-line-banner.jpg" class="width banner-item" mode="widthFix" />
+  </view>
+
+  <view class="pad-lr-15 home-content">
+
+    <!-- 预约操作 -->
+    <view class="pad-tb-20 reservation-item">
+      <view class="f-w f-15">无需自行拆卸，设备运行中校验</view>
+      <view class="f-12 mt-10">
+        <span class="test-paper-theme-color">校验周期：</span>
+        <span class="f-w">1-3天</span>
+      </view>
+      <view class="t-c pad-tb-10 font-white f-15 reservation-btn" bind:tap="changePage">上门校验预约</view>
+    </view>
+
+
+  </view>
+
+  <view class=" width pad-lr-15 fixed-footer-info">
+    <!-- 联系位置 -->
+    <view class="pad-all-15 f-12 test-paper-theme-color contact-we-box">
+      <view class="flex contact-item">
+        <span class="contact-lable">联系人：</span>
+        <view class="flex-1">庄经理</view>
+      </view>
+      <view class="flex contact-item">
+        <span class="contact-lable">联系电话：</span>
+        <view class="flex-1">021-67740013 67740130</view>
+      </view>
+      <view class="flex contact-item">
+        <span class="contact-lable">校验地址：</span>
+        <view class="flex-1">上海市沪松路7弄7号</view>
+      </view>
+      <view class="flex contact-item">
+        <span class="contact-lable">营业时间：</span>
+        <view class="flex-1">8:00-16:00 周末可营业</view>
+      </view>
+    </view>
+
+    <!-- 尾部-公司logo -->
+    <view class="pad-tb-10 t-c footer-logo">
+      <image src="../../image/company-logo.png" mode="widthFix" class="middle company-logo" />
+      <span class="f-12 ml-10 test-paper-theme-color company-name">上海松炉设备检测有限公司</span>
+    </view>
+  </view>
+
+
+
+</view>

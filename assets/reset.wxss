@@ -1,0 +1,566 @@
+
+.width {
+  width: 100%;
+}
+
+.height {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+
+.flex-middle {
+  align-items: center;
+  align-content: center;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.halfradius {
+  border-radius: 50%;
+}
+
+.theme-radius {
+  border-radius: 10rpx;
+}
+
+.border-radius-arc {
+  border-radius: 500rpx;
+}
+
+.relative {
+	position: relative;
+}
+.p-fixed {
+	position: fixed;
+}
+.p-static {
+	position: static;
+}
+
+.absolute {
+  position: absolute;
+}
+.absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+.rotate45 {
+  transform: rotate(45deg);
+}
+
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.f-8 {
+  font-size: 16rpx !important;
+}
+.f-10 {
+  font-size: 20rpx !important;
+}
+
+.f-11 {
+  font-size: 22rpx !important;
+}
+
+.f-12 {
+  font-size: 24rpx !important;
+}
+
+.f-13 {
+  font-size: 26rpx !important;
+}
+
+.f-14 {
+  font-size: 28rpx !important;
+}
+
+.f-15 {
+  font-size: 30rpx !important;
+}
+
+.f-16 {
+  font-size: 32rpx !important;
+}
+
+.f-17 {
+  font-size: 34rpx !important;
+}
+.f-18 {
+  font-size: 36rpx !important;
+}
+
+.f-20 {
+  font-size: 40rpx !important;
+}
+
+.f-22 {
+  font-size: 44rpx !important;
+}
+
+.f-24 {
+  font-size: 48rpx !important;
+}
+
+.f-26 {
+  font-size: 52rpx !important;
+}
+
+.f-28 {
+  font-size: 56rpx !important;
+}
+
+.f-30 {
+  font-size: 60rpx !important;
+}
+
+.f-32 {
+  font-size: 64rpx !important;
+}
+
+.f-34 {
+  font-size: 68rpx !important;
+}
+
+.f-w {
+  font-weight: bold;
+}
+
+.over-hid {
+  overflow: hidden;
+}
+
+.mirror {
+  transform: rotate(180deg);
+}
+
+.t-l {
+  text-align: left;
+}
+
+.t-c {
+  text-align: center;
+}
+
+.t-r {
+  text-align: right;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.line-0 {
+  line-height: 0;
+}
+
+.text-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top_left_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+/* margin 20 */
+.mar-right-20,
+.mr-20 {
+  margin-right: 40rpx;
+}
+
+.mar-left-20,
+.ml-20 {
+  margin-left: 40rpx;
+}
+
+.mar-top-20,
+.mt-20 {
+  margin-top: 40rpx;
+}
+
+.mar-bottom-20,
+.mb-20 {
+  margin-bottom: 40rpx;
+}
+
+.mar-tb-20 {
+  margin: 40rpx 0;
+}
+
+.mar-lr-20 {
+  margin: 0 40rpx;
+}
+
+.mar-all-20 {
+  margin: 40rpx;
+}
+
+/* margin 15 */
+.mar-top-15,
+.mt-15 {
+  margin-top: 30rpx;
+}
+
+.mar-left-15,
+.ml-15 {
+  margin-left: 30rpx;
+}
+
+.mar-right-15,
+.mr-15 {
+  margin-right: 30rpx;
+}
+
+.mar-bottom-15,
+.mb-15 {
+  margin-bottom: 30rpx;
+}
+
+.mar-tb-15 {
+  margin: 30rpx 0;
+}
+
+.mar-lr-15 {
+  margin: 0 30rpx;
+}
+
+.mar-all-15 {
+  margin: 30rpx;
+}
+
+/* margin 10 */
+.mar-top-10,
+.mt-10 {
+  margin-top: 20rpx;
+}
+
+.mar-left-10,
+.ml-10 {
+  margin-left: 20rpx;
+}
+
+.mar-right-10,
+.mr-10 {
+  margin-right: 20rpx;
+}
+
+.mar-bottom-10,
+.mb-10 {
+  margin-bottom: 20rpx;
+}
+
+.mar-tb-10 {
+  margin: 20rpx 0;
+}
+
+.mar-lr-10 {
+  margin: 0 20rpx;
+}
+
+.mar-all-10 {
+  margin: 20rpx;
+}
+
+/* margin 5 */
+.mar-top-5,
+.mt-5 {
+  margin-top: 10rpx;
+}
+
+.mar-left-5,
+.ml-5 {
+  margin-left: 10rpx;
+}
+
+.mar-right-5,
+.mr-5 {
+  margin-right: 10rpx;
+}
+
+.mar-bottom-5,
+.mb-5 {
+  margin-bottom: 10rpx;
+}
+
+.mar-tb-5 {
+  margin: 10rpx 0;
+}
+
+.mar-lr-5 {
+  margin: 0 10rpx;
+}
+
+.mar-all-5 {
+  margin: 10rpx;
+}
+
+.mar-center {
+  margin: 0 auto;
+}
+
+/* padding 20 */
+.pad-top-20,
+.pt-20 {
+  padding-top: 40rpx;
+}
+
+.pad-bottom-20,
+.pb-20 {
+  padding-bottom: 40rpx;
+}
+
+.pad-left-20,
+.pl-20 {
+  padding-left: 40rpx;
+}
+
+.pad-right-20,
+.pr-20 {
+  padding-right: 40rpx;
+}
+
+.pad-tb-20 {
+  padding: 40rpx 0;
+}
+
+.pad-lr-20 {
+  padding: 0 40rpx;
+}
+
+.pad-all-20 {
+  padding: 40rpx;
+}
+
+/* padding 15 */
+.pad-top-15,
+.pt-15 {
+  padding-top: 30rpx;
+}
+
+.pad-bottom-15,
+.pb-15 {
+  padding-bottom: 30rpx;
+}
+
+.pad-left-15,
+.pl-15 {
+  padding-left: 30rpx;
+}
+
+.pad-right-15,
+.pr-15 {
+  padding-right: 30rpx;
+}
+
+.pad-tb-15 {
+  padding: 30rpx 0;
+}
+
+.pad-lr-15 {
+  padding: 0 30rpx;
+}
+
+.pad-all-15 {
+  padding: 30rpx;
+}
+
+/* padding 10 */
+.pad-top-10,
+.pt-10 {
+  padding-top: 20rpx;
+}
+
+.pad-right-10,
+.pr-10 {
+  padding-right: 20rpx;
+}
+
+.pad-left-10,
+.pl-10 {
+  padding-left: 20rpx;
+}
+
+.pad-bottom-10,
+.pb-10 {
+  padding-bottom: 20rpx;
+}
+
+.pad-tb-10 {
+  padding: 20rpx 0;
+}
+
+.pad-lr-10 {
+  padding: 0 20rpx;
+}
+
+.pad-all-10 {
+  padding: 20rpx;
+}
+
+/* padding 5 */
+.pad-top-5,
+.pt-5 {
+  padding-top: 10rpx;
+}
+
+.pad-left-5,
+.pl-5 {
+  padding-left: 10rpx;
+}
+
+.pad-right-5,
+.pr-5 {
+  padding-right: 10rpx;
+}
+
+.pad-bottom-5,
+.pb-5 {
+  padding-bottom: 10rpx;
+}
+
+.pad-tb-5 {
+  padding: 10rpx 0;
+}
+
+.pad-lr-5 {
+  padding: 0 10rpx;
+}
+
+.pad-all-5 {
+  padding: 10rpx;
+}
+
+.row {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.va-bottom {
+  vertical-align: bottom;
+}
+
+.v-width {
+	width: 100vw;
+}
+.v-height {
+	height: 100vh;
+}
+
+.theme-color {
+  color: #338cfd;
+}
+.theme-black {
+  color: #333333;
+}
+.test-paper-theme-color {
+  color: #878787;
+}
+.test-item-theme-bg-color {
+  background: #323232;
+}
+.subject-color {
+  color: #eeeeee;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.font-white {
+  color: white;
+}
+
+.gray-bg-color {
+  background-color: #999;
+}
+
+.gray {
+  color: #999;
+}
+
+.red {
+  color: red;
+}
+
+.text-underline {
+  text-decoration:underline;
+}
+
+.del-line {
+	text-decoration:line-through
+}
+
+/* 弹窗相关的 */
+.model-content {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+}
+.model-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .7);
+}
+
+
+.page-content {
+  min-height: 100vh;
+  background: white;
+}

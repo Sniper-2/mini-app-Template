@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/on-line-check/on-line-check",
+    "pages/add-reservation-info/add-reservation-info",
+    "pages/visit-check/visit-check",
+    "pages/off-line-check/off-line-check",
+    "pages/report-query/report-query"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

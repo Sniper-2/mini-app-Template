@@ -1,0 +1,15 @@
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  /* padding-bottom: 550rpx; */
+}
+.center-menu-content {
+  padding: 40rpx 0;
+  flex-wrap: wrap;
+}
+.map-img-item {
+  /* width: 100vw; */
+  bottom: 0;
+  left: 0;
+}

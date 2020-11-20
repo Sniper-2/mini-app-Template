@@ -1,0 +1,6 @@
+
+@import "/assets/reset.wxss";
+
+.page-container {
+  min-height: 100vh;
+}

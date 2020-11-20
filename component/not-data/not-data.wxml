@@ -1,0 +1,4 @@
+<view class="width gray t-c not-data" style="background: {{ bgc }}">
+	<image src="../../image/not-data-icon.png" mode="widthFix" class="not-data-icon" />
+	<view class="f-14 mt-10">{{ tipsContent }}</view>
+</view>

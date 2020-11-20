@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="page-container">
+
+  <!-- 顶部banner位置 -->
+  <view class="">
+    <image src="../../image/on-line-banner.jpg" class="block width banner-item" mode="widthFix" />
+  </view>
+
+  <view class="pad-lr-15 home-content">
+
+    <!-- 预约操作 -->
+    <view class="pad-tb-20 reservation-item">
+      <view class="f-w f-15">需自行拆卸，并送至校验中心</view>
+      <view class="f-12 mt-10">
+        <span class="test-paper-theme-color">校验周期：</span>
+        <span class="f-w">1-3天</span>
+      </view>
+    </view>
+  </view>
+
+  <!-- 地图 -->
+  <view>
+    <image src="../../image/map-img.jpg" mode="widthFix" class="width block map-img-item" />
+  </view>
+
+
+
+</view>

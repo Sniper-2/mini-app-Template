@@ -1,0 +1,38 @@
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 330rpx;
+  box-sizing: border-box;
+}
+.center-menu-content {
+  padding: 40rpx 0;
+  flex-wrap: wrap;
+}
+
+/* 联系我们 */
+.contact-we-box {
+  background: #f5f7f8;
+}
+.contact-item .contact-lable {
+  width: 130rpx;
+}
+.contact-item + .contact-item {
+  margin-top: 14rpx;
+}
+
+/* 尾部 - 公司名称 */
+.fixed-footer-info {
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+}
+.company-logo {
+  width: 60rpx;
+}
+
+/* 上门校验预约 */
+.reservation-btn {
+  margin: 50rpx 0;
+  background: #cb2954;
+  border-radius: 8rpx;
+}

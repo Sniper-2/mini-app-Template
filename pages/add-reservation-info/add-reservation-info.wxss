@@ -1,0 +1,45 @@
+.data-fill-item {
+  margin-bottom: 20rpx;
+}
+.data-fill-lable {
+  width: 120rpx;
+  color: #3e4858;
+}
+.data-fill-input {
+  color: #878787;
+  background: #f5f7f8;
+  padding: 20rpx 30rpx;
+  border-radius: 4rpx;
+}
+/* 时间选择 */
+.rewrite-rui-class {
+  color: #878787 !important;
+  font-size: 28rpx !important;
+  height: auto !important;
+  padding-left: 30rpx !important;
+  padding-right: 30rpx !important;
+  padding-top: 20rpx !important;
+  padding-bottom: 20rpx !important;
+  border: none !important;
+  border-radius: 4rpx !important;
+  background: #f5f7f8 !important;
+}
+
+/* 日历的icon */
+.calendar-icon {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  width: 45rpx;
+  transform: translateY(-50%);
+}
+.submit-data-btn {
+  width: calc(100vw - 60rpx);
+  position: fixed;
+  left: 30rpx;
+  bottom: 5%;
+  margin: 50rpx 0;
+  background: #cb2954;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}

@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 300rpx;
+  box-sizing: border-box;
+}
+.center-menu-content {
+  padding: 40rpx 0;
+  flex-wrap: wrap;
+}
+.menu-item {
+  width: calc(50% - 20rpx);
+  /* border: 2rpx solid red; */
+  border: 2rpx solid #f5f5f5;
+  margin-right: 15rpx;
+  padding: 13vw 0;
+  border-radius: 8rpx;
+}
+.menu-item:nth-of-type(1),
+.menu-item:nth-of-type(2) {
+  margin-bottom: 30rpx;
+}
+.menu-item:nth-child(even) {
+  margin-left: 15rpx;
+  margin-right: 0;
+}
+.home-menu-icon {
+  width: 90rpx;
+}
+
+.home-content {
+  position: relative;
+}
+/* 授权 */
+.authorization-model {
+  width: 100% !important;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  /* background: red; */
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* 联系我们 */
+.contact-we-box {
+  background: #f5f7f8;
+}
+.contact-item .contact-lable {
+  width: 130rpx;
+}
+.contact-item + .contact-item {
+  margin-top: 14rpx;
+}
+
+/* 尾部 - 公司名称 */
+.company-logo {
+  width: 60rpx;
+}
+.footer-content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

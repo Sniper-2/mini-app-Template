@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "报告查询",
+  "usingComponents": {
+    "not-data-ui": "/component/not-data/not-data"
+  }
+}

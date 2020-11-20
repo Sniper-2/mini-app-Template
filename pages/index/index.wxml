@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+
+  <!-- 顶部banner位置 -->
+  <view class="">
+    <image src="../../image/home-banner.jpg" class="width banner-item" mode="widthFix" />
+  </view>
+
+  <view class="pad-lr-15 home-content">
+    <!-- 授权 -->
+    <!-- 菜单位置 -->
+    <view class="flex flex-middle center-menu-content">
+      <view class="relative menu-item" bind:tap="changePage" data-url="/pages/on-line-check/on-line-check"> 
+       <!--  -->
+        <button wx:if="{{ !hasUserInfo }}" class="authorization-model" 
+          data-url="/pages/on-line-check/on-line-check"
+          open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        </button>
+        <view class="t-c absolute-center">
+          <image src="../../image/home-menu-on-line.png" mode="widthFix" class="home-menu-icon" />
+          <view class="f-12 test-paper-theme-color menu-name">在线校验</view>
+        </view>
+      </view>
+      <view class="relative menu-item" bind:tap="changePage" data-url="/pages/visit-check/visit-check">
+        <button wx:if="{{ !hasUserInfo }}" class="authorization-model" 
+          data-url="/pages/visit-check/visit-check"
+          open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        </button>
+        <view class="t-c absolute-center">
+          <image src="../../image/home-menu-visit.png" mode="widthFix" class="home-menu-icon" />
+          <view class="f-12 test-paper-theme-color menu-name">上门校验</view>
+        </view>
+      </view>
+      <view class="relative menu-item" bind:tap="changePage" data-url="/pages/off-line-check/off-line-check">
+        <button wx:if="{{ !hasUserInfo }}" class="authorization-model" 
+          data-url="/pages/off-line-check/off-line-check"
+          open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        </button>
+        <view class="t-c absolute-center">
+          <image src="../../image/home-menu-off-line.png" mode="widthFix" class="home-menu-icon" />
+          <view class="f-12 test-paper-theme-color menu-name">离线校验</view>
+        </view>
+      </view>
+      <view class="relative menu-item" bind:tap="changePage" data-url="/pages/report-query/report-query">
+        <button wx:if="{{ !hasUserInfo }}" class="authorization-model" 
+          data-url="/pages/report-query/report-query"
+          open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        </button>
+        <view class="t-c absolute-center">
+          <image src="../../image/home-menu-report.png" mode="widthFix" class="home-menu-icon" />
+          <view class="f-12 test-paper-theme-color menu-name">报告查询</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer-content">
+    <!-- 联系位置 -->
+    <view class="pad-all-15 f-12 test-paper-theme-color contact-we-box">
+      <view class="flex contact-item">
+        <span class="contact-lable">联系人：</span>
+        <view class="flex-1">庄经理</view>
+      </view>
+      <view class="flex contact-item">
+        <span class="contact-lable">联系电话：</span>
+        <view class="flex-1">021-67740013 67740130</view>
+      </view>
+      <view class="flex contact-item">
+        <span class="contact-lable">校验地址：</span>
+        <view class="flex-1">上海市沪松路7弄7号</view>
+      </view>
+    </view>
+    
+    <!-- 尾部-公司logo -->
+    <view class="pad-tb-10 t-c footer-logo">
+      <image src="../../image/company-logo.png" mode="widthFix" class="middle company-logo" />
+      <span class="f-12 ml-10 test-paper-theme-color company-name">上海松炉设备检测有限公司</span>
+    </view>
+  </view>
+
+
+</view>

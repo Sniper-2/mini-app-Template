@@ -1,0 +1,11 @@
+@import '../../assets/reset.wxss';
+.not-data {
+	padding: 80rpx 0;
+}
+.not-data i {
+	font-size: 120rpx;
+}
+
+.not-data-icon {
+	width: 180rpx;
+}
