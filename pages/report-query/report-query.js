@@ -60,13 +60,14 @@ Page({
   },
 
   // pdf预览
-  previewPDF () {
+  previewPDF (e) {
+    let item = e.currentTarget.dataset.item
     wx.showLoading({
       title: '请稍候',
       mask: true
     })
     wx.downloadFile({
-      url: 'https://api.jy.zjnan.cn/inspection/images/876f2c788720478f947fbfc4c4719f20.pdf',
+      url: item.pdf,
       success (res) {
         wx.hideLoading()
         wx.openDocument({
