@@ -38,3 +38,6 @@
 .info-lable {
   width: 130rpx;
 }
+.preview-PDF {
+  color: #4eb1f7;
+}

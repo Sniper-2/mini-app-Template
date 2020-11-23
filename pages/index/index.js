@@ -7,7 +7,18 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     sessionKey: '',
-    configInfo: {}
+    configInfo: {},
+    latitude: 23.099994,
+    longitude: 113.324520,
+    markers: [{
+      //标记点 id
+      id: 1,
+      //标记点纬度
+      latitude: 23.099994,
+      //标记点经度
+      longitude: 113.324520,
+      name: '行之当前的位置'
+    }],
   },
   //事件处理函数
   bindViewTap: function() {
@@ -85,5 +96,17 @@ Page({
     if (!this.data.hasUserInfo) return
     let url = e.currentTarget.dataset.url
     wx.navigateTo({  url })
+  },
+
+  onMarkerTap(e) {
+    console.log('@@ markertap', e)
+  },
+  
+  onCalloutTap(e) {
+    console.log('@@ onCalloutTap', e)
+  },
+
+  onLabelTap(e) {
+    console.log('@@ labletap', e)
   }
 })

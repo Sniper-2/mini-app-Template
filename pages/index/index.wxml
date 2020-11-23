@@ -83,6 +83,19 @@
       <image src="../../image/company-logo.png" mode="widthFix" class="middle company-logo" />
       <span class="f-12 ml-10 test-paper-theme-color company-name">上海松炉设备检测有限公司</span>
     </view>
+    
+
+    <!-- <map 
+      id="mapId"
+      class="map"
+      show-location="{{ true }}"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{ markers }}"
+      bindmarkertap="onMarkerTap"
+      bindcallouttap="onCalloutTap"
+      bindlabeltap="onLabelTap"
+    ></map> -->
   </view>
 
 

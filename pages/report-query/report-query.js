@@ -57,5 +57,26 @@ Page({
       })
 
     })
+  },
+
+  // pdf预览
+  previewPDF () {
+    wx.showLoading({
+      title: '请稍候',
+      mask: true
+    })
+    wx.downloadFile({
+      url: 'https://api.jy.zjnan.cn/inspection/images/876f2c788720478f947fbfc4c4719f20.pdf',
+      success (res) {
+        wx.hideLoading()
+        wx.openDocument({
+          filePath: res.tempFilePath,
+          showMenu: true
+        })
+      },
+      fail (err) {
+        console.log(err)
+      }
+    })
   }
 })
