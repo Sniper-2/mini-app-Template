@@ -1,24 +1,13 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+let plugin = requirePlugin('routePlan');
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
     sessionKey: '',
     configInfo: {},
-    latitude: 23.099994,
-    longitude: 113.324520,
-    markers: [{
-      //标记点 id
-      id: 1,
-      //标记点纬度
-      latitude: 23.099994,
-      //标记点经度
-      longitude: 113.324520,
-      name: '行之当前的位置'
-    }],
   },
   //事件处理函数
   bindViewTap: function() {
@@ -97,16 +86,18 @@ Page({
     let url = e.currentTarget.dataset.url
     wx.navigateTo({  url })
   },
-
-  onMarkerTap(e) {
-    console.log('@@ markertap', e)
-  },
   
-  onCalloutTap(e) {
-    console.log('@@ onCalloutTap', e)
-  },
-
-  onLabelTap(e) {
-    console.log('@@ labletap', e)
+  // 前往导航
+  toPathPage () {
+    let key = '5TCBZ-XOH3U-F6EVA-2CIXB-JVUTH-VCBEX';  //使用在腾讯位置服务申请的key
+    let referer = '松炉检测';   //调用插件的app的名称
+    let endPoint = JSON.stringify({  //终点
+      'name': '上海市沪松路7弄7座',
+      'latitude': 31.01 ,
+      'longitude': 121.244
+    });
+    wx.navigateTo({
+        url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+    })
   }
 })
