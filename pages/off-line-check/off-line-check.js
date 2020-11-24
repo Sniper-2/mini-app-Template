@@ -5,7 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    configInfo: {}
+    configInfo: {},
+    latitude: 23.099994,
+    longitude: 113.324520,
+    markers: [{
+      //标记点 id
+      id: 1,
+      //标记点纬度
+      latitude: 23.099994,
+      //标记点经度
+      longitude: 113.324520,
+      name: '行之当前的位置'
+    }],
   },
 
   /**
@@ -13,7 +24,18 @@ Page({
    */
   onLoad: function (options) {
     let configInfo = app.globalData.configInfo
+    let markers = [
+      {
+        id: 1,
+        latitude: configInfo.lat,
+        longitude: configInfo.lng,
+        name: configInfo.address
+      }
+    ]
     this.setData({
+      markers,
+      latitude: configInfo.lat,
+      longitude: configInfo.lng,
       configInfo
     })
   },

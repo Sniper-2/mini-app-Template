@@ -19,8 +19,15 @@
   </view>
 
   <!-- 地图 -->
-  <rich-text nodes="{{ configInfo.offlineContent }}" bind:tap="toPathPage"></rich-text>
-
+  <!-- <rich-text nodes="{{ configInfo.offlineContent }}" bind:tap="toPathPage"></rich-text> -->
+  <map 
+    id="mapId"
+    class="map"
+    show-location="{{ true }}"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    markers="{{ markers }}"
+  ></map>
 
 
 </view>
