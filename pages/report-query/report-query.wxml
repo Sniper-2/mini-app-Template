@@ -45,7 +45,7 @@
           <span class="flex-1 info-content">{{ item.tel }}</span>
         </view>
       </view>
-      <view class="item-reservation-info">
+      <view class="item-reservation-info" wx:if="{{ selectTabs }}">
         <view class="flex flex-middle reservation-info-data">
           <span class="test-paper-theme-color info-lable">检测报告：</span>
           <span wx:if="{{ !item.pdf }}">尚未上传</span>
