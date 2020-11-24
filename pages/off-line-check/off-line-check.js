@@ -73,5 +73,5 @@ Page({
     wx.navigateTo({
         url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     })
-  }
+  },
 })

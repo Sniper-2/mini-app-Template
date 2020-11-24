@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
-  padding-bottom: 500rpx;
+  padding-bottom: 650rpx;
 }
 .center-menu-content {
   padding: 40rpx 0;
@@ -15,8 +15,13 @@
 }
 .map {
   display: block;
-  position: absolute;
   height: 500rpx;
   width: 100%;
-  bottom: 3%;
+}
+.footer-dom {
+  position: absolute;
+  bottom: 0%;
+}
+.company-logo {
+  width: 60rpx;
 }
