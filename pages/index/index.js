@@ -92,9 +92,9 @@ Page({
     let key = '5TCBZ-XOH3U-F6EVA-2CIXB-JVUTH-VCBEX';  //使用在腾讯位置服务申请的key
     let referer = '松炉检测';   //调用插件的app的名称
     let endPoint = JSON.stringify({  //终点
-      'name': '上海市沪松路7弄7座',
-      'latitude': 31.01 ,
-      'longitude': 121.244
+      'name': this.data.configInfo.address,
+      'latitude': this.data.configInfo.lat,
+      'longitude': this.data.configInfo.lng
     });
     wx.navigateTo({
         url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint

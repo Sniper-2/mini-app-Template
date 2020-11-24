@@ -19,7 +19,7 @@
   </view>
 
   <!-- 地图 -->
-  <rich-text nodes="{{ configInfo.offlineContent }}"></rich-text>
+  <rich-text nodes="{{ configInfo.offlineContent }}" bind:tap="toPathPage"></rich-text>
 
 
 
