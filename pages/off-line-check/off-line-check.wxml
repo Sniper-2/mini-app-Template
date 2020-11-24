@@ -32,7 +32,8 @@
     <!-- 尾部-公司logo -->
     <view class="pad-tb-10 t-c footer-logo" bind:tap="toPathPage">
       <image src="../../image/company-logo.png" mode="widthFix" class="middle company-logo" />
-      <span class="f-12 ml-10 test-paper-theme-color company-name">上海松炉设备检测有限公司(点击导航)</span>
+      <span class="f-12 ml-10 test-paper-theme-color company-name">上海松炉设备检测有限公司</span>
+      <span class="f-10 ml-5 navigation-btn">点击导航</span>
     </view>
   </view>
 

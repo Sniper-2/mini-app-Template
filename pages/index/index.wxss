@@ -69,3 +69,9 @@
   width: 100%;
   height: 300px;
 }
+.navigation-btn {
+  background: #0085fe;
+  color: white;
+  border-radius: 10rpx;
+  padding: 4rpx 10rpx;
+}
