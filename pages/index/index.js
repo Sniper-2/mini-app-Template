@@ -89,7 +89,7 @@ Page({
   
   // 前往导航
   toPathPage () {
-    let key = '5TCBZ-XOH3U-F6EVA-2CIXB-JVUTH-VCBEX';  //使用在腾讯位置服务申请的key
+    let key = 'VFMBZ-DPU34-3PEUP-XLAGN-36LCE-GUBJG';  //使用在腾讯位置服务申请的key
     let referer = '松炉检测';   //调用插件的app的名称
     let endPoint = JSON.stringify({  //终点
       'name': this.data.configInfo.address,
