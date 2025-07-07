@@ -1,54 +1,56 @@
-<!--index.wxml-->
-<view class="page-container">
-
-  <!-- 顶部banner位置 -->
-  <view class="">
-    <image src="{{ configInfo.onlineImg }}" class="width banner-item" mode="widthFix" />
+<!-- pages/profile/profile.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">个人中心</text>
   </view>
 
-  <view class="pad-lr-15 home-content">
-
-    <!-- 预约操作 -->
-    <view class="pad-tb-20 reservation-item">
-      <view class="f-w f-15">无需自行拆卸，设备运行中校验</view>
-      <view class="f-12 mt-10">
-        <span class="test-paper-theme-color">校验周期：</span>
-        <span class="f-w">1-3天</span>
-      </view>
-      <view class="t-c pad-tb-10 font-white f-15 reservation-btn" bind:tap="changePage">在线校验预约</view>
-    </view>
-
-
-  </view>
-
-  <view class=" width pad-lr-15 fixed-footer-info">
-    <!-- 联系位置 -->
-    <view class="pad-all-15 f-12 test-paper-theme-color contact-we-box">
-      <view class="flex contact-item">
-        <span class="contact-lable">联系人：</span>
-        <view class="flex-1">{{ configInfo.contact }}</view>
-      </view>
-      <view class="flex contact-item">
-        <span class="contact-lable">联系电话：</span>
-        <view class="flex-1">{{ configInfo.tel }}</view>
-      </view>
-      <view class="flex contact-item">
-        <span class="contact-lable">校验地址：</span>
-        <view class="flex-1">{{ configInfo.address }}</view>
-      </view>
-      <view class="flex contact-item">
-        <span class="contact-lable">营业时间：</span>
-        <view class="flex-1">{{ configInfo.businessHours }}</view>
-      </view>
-    </view>
-
-    <!-- 尾部-公司logo -->
-    <view class="pad-tb-10 t-c footer-logo">
-      <image src="../../image/company-logo.png" mode="widthFix" class="middle company-logo" />
-      <span class="f-12 ml-10 test-paper-theme-color company-name">上海松炉设备检测有限公司</span>
+  <view class="user-info">
+    <image class="avatar" src="{{user.avatar || '/images/default-avatar.png'}}" />
+    <view class="user-text">
+      <text class="nickname">{{user.nickname || '未登录'}}</text>
+      <text class="level">等级: {{user.level || '普通会员'}}</text>
     </view>
   </view>
 
+  <view class="order-section">
+    <view class="section-title">我的订单</view>
+    <view class="order-list">
+      <view class="order-item" bindtap="goToOrders" data-status="pending">
+        <text class="order-icon">🕒</text>
+        <text class="order-text">待付款</text>
+      </view>
+      <view class="order-item" bindtap="goToOrders" data-status="shipping">
+        <text class="order-icon">🚚</text>
+        <text class="order-text">待收货</text>
+      </view>
+      <view class="order-item" bindtap="goToOrders" data-status="completed">
+        <text class="order-icon">✅</text>
+        <text class="order-text">已完成</text>
+      </view>
+      <view class="order-item" bindtap="goToOrders" data-status="refund">
+        <text class="order-icon">💰</text>
+        <text class="order-text">退款/售后</text>
+      </view>
+    </view>
+  </view>
 
+  <view class="function-list">
+    <view class="function-item" bindtap="goToAddress">
+      <text class="function-icon">🏠</text>
+      <text class="function-text">地址管理</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="function-item" bindtap="contactSupport">
+      <text class="function-icon">📞</text>
+      <text class="function-text">联系客服</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="function-item" bindtap="goToSettings">
+      <text class="function-icon">⚙️</text>
+      <text class="function-text">设置</text>
+      <text class="arrow">›</text>
+    </view>
+  </view>
 
+  <button class="logout-btn" bindtap="logout">退出登录</button>
 </view>

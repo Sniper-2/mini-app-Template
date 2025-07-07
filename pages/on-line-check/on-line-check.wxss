@@ -1,38 +1,139 @@
-.page-container {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 330rpx;
-  box-sizing: border-box;
-}
-.center-menu-content {
-  padding: 40rpx 0;
-  flex-wrap: wrap;
+/* pages/profile/profile.wxss */
+.container {
+  background-color: #fff8f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* 联系我们 */
-.contact-we-box {
-  background: #f5f7f8;
-}
-.contact-item .contact-lable {
-  width: 130rpx;
-}
-.contact-item + .contact-item {
-  margin-top: 14rpx;
-}
-
-/* 尾部 - 公司名称 */
-.fixed-footer-info {
-  position: fixed;
-  bottom: 0;
-  box-sizing: border-box;
-}
-.company-logo {
-  width: 60rpx;
+.header {
+  height: 48px;
+  background-color: #ff7043;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* 上门校验预约 */
-.reservation-btn {
-  margin: 50rpx 0;
-  background: #cb2954;
-  border-radius: 8rpx;
+.user-info {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  background-color: #fff3e0;
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+  margin-right: 20px;
+  border: 2px solid #ff7043;
+}
+
+.user-text {
+  flex: 1;
+}
+
+.nickname {
+  font-size: 22px;
+  font-weight: 700;
+  color: #5d4037;
+}
+
+.level {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #a1887f;
+}
+
+.order-section {
+  margin: 0 15px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5d4037;
+  margin-bottom: 10px;
+}
+
+.order-list {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-item {
+  background-color: #ffccbc;
+  flex: 1;
+  margin: 0 5px;
+  padding: 15px 0;
+  border-radius: 8px;
+  text-align: center;
+  color: #5d4037;
+  font-weight: 600;
+  user-select: none;
+}
+
+.order-icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.function-list {
+  margin: 20px 15px 0 15px;
+  background-color: #fff3e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.function-item {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ffd9cc;
+  user-select: none;
+}
+
+.function-item:last-child {
+  border-bottom: none;
+}
+
+.function-icon {
+  font-size: 20px;
+  margin-right: 12px;
+  color: #ff7043;
+}
+
+.function-text {
+  flex: 1;
+  font-size: 16px;
+  color: #5d4037;
+}
+
+.arrow {
+  color: #a1887f;
+  font-size: 18px;
+}
+
+.logout-btn {
+  margin: 30px 15px 20px 15px;
+  background-color: #ff7043;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 25px;
+  height: 45px;
+  border: none;
+  user-select: none;
 }

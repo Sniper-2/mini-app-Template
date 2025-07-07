@@ -1,5 +1,6 @@
 
 @import "/assets/reset.wxss";
+@import "/assets/iconfont/iconfont.wxss";
 
 .page-container {
   min-height: 100vh;

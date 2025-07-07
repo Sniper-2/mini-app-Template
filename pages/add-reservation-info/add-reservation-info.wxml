@@ -17,20 +17,6 @@
       data-key="address"
       placeholder-style="color:#ababab" placeholder="点击填写"/>
   </view>
-  <view class="f-14 flex flex-middle relative data-fill-item">
-    <span class="data-fill-lable ">校验时间</span>
-    <rui-picker 
-      class="flex-1 ml-5 times-select"
-      rui-class="rewrite-rui-class"
-      slot="flexchild" 
-      start="2000-01-01 00:00" 
-      end="2050-12-31 23:59" 
-      value="{{ formData.checkTime }}" 
-      fields="minute" 
-      bindchangedatepicker="changeMinute">
-    </rui-picker>
-    <image src="../../image/calendar-icon.png" mode="widthFix" class="calendar-icon" />
-  </view>
   <view class="f-14 flex flex-middle data-fill-item">
     <span class="data-fill-lable ">联系人</span>
     <input class="flex-1 ml-5 data-fill-input" 

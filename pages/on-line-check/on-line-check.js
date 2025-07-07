@@ -1,48 +1,60 @@
-let app = getApp()
+// pages/profile/profile.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    configInfo: {}
+    user: {
+      avatar: '', // 可从接口获取头像
+      nickname: '张三',
+      level: '黄金会员',
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    let configInfo = app.globalData.configInfo
-    this.setData({
-      configInfo
-    })
+  goToOrders(e) {
+    const status = e.currentTarget.dataset.status;
+    wx.showToast({
+      title: `跳转订单页，状态：${status}`,
+      icon: 'none',
+    });
+    // 实际中用 wx.navigateTo 跳转对应页面
+    // wx.navigateTo({ url: `/pages/orders/orders?status=${status}` });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  goToAddress() {
+    wx.showToast({
+      title: '跳转地址管理',
+      icon: 'none',
+    });
+    // wx.navigateTo({ url: '/pages/address/address' });
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  contactSupport() {
+    wx.showModal({
+      title: '联系客服',
+      content: '拨打电话 123-456-7890？',
+      success(res) {
+        if (res.confirm) {
+          wx.makePhoneCall({ phoneNumber: '1234567890' });
+        }
+      }
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  goToSettings() {
+    wx.showToast({
+      title: '跳转设置',
+      icon: 'none',
+    });
+    // wx.navigateTo({ url: '/pages/settings/settings' });
   },
 
-  // 跳转页面
-  changePage(e) {
-    wx.navigateTo({  
-      url: '/pages/add-reservation-info/add-reservation-info?type=1' 
-    })
+  logout() {
+    wx.showModal({
+      title: '确认退出登录？',
+      success(res) {
+        if (res.confirm) {
+          wx.showToast({ title: '已退出', icon: 'success' });
+          // 清理登录状态，跳转登录页等逻辑
+        }
+      }
+    });
   }
-})
+});
