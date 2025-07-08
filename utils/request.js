@@ -1,4 +1,5 @@
-const domain = 'https://api.wx.shslsb.com';
+// const domain = 'https://api.wx.shslsb.com';
+const domain = 'http://192.168.2.106:3000';
 export default function request(api = '') {
   let way = ['get', 'post', 'del', 'put']
   let obj = {}
@@ -22,6 +23,7 @@ function wrapMethod(methodName, prefix) {
 }
 
 function methods(url, data, method, resolve, reject, meta) {
+  console.log(111)
   if (meta.loading) wx.showLoading({
     title: meta.tip || '请稍候',
     mask: true
@@ -40,19 +42,14 @@ function methods(url, data, method, resolve, reject, meta) {
     data,
     method,
     success: (res) => {
+      console.log(`res`)
+      console.log(res)
       if (meta.loading) wx.hideLoading()
 
-      if (res.data.code === 200) {
-        resolve(res.data.data || res.data) // 成功直接抛出结果值
+      if (res.statusCode === 200) {
+        resolve(res.data || res.data) // 成功直接抛出结果值
       } else {
-        reject(res.data.data)
-        if (!meta.hideError) {
-          wx.showToast({
-            title: res.data.errorMessage,
-            icon: 'none',
-            duration: 3000
-          })
-        }
+        reject(res.data)
 
       }
     },

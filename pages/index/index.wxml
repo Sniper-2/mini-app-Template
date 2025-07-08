@@ -6,22 +6,28 @@
 
   <view class="menu-container">
     <scroll-view class="left-class-container">
-      <view class="class-item select-class-item">小桃又有</view>
+      <view 
+        bind:tap="selectClass"
+        data-item="{{item}}"
+        data-index="{{index}}"
+        class="class-item {{ item.isSelect ? 'select-class-item' : '' }}" wx:for="{{ classList }}" wx:key="id">
+        {{ item.name }}
+      </view>
+      <!-- <view class="class-item">小桃又有</view>
       <view class="class-item">小桃又有</view>
       <view class="class-item">小桃又有</view>
-      <view class="class-item">小桃又有</view>
-      <view class="class-item">小桃又有</view>
+      <view class="class-item">小桃又有</view> -->
     </scroll-view>
     <scroll-view scroll-y="{{true}}" class="right-menu-container">
       <view class="menu-item" wx:for="{{ dishList }}" wx:key="key">
         <view class="menu-image-container">
-          <image mode="widthFix" class="menu-image" src="{{ item.image }}" />
+          <image mode="widthFix" class="menu-image" src="{{ item.imageUrl }}" />
         </view>
         <view class="menu-info">
           <view class="menu-name">{{ item.name }}</view>
           <view class="menu-price">￥{{ item.price }}</view>
 
-          <view class="add-buy-number">
+          <view class="add-buy-number" data-item="{{ item }}" data-index="{{ index }}" bind:tap="addDish">
             <text class="iconfont icon-jia"></text>
           </view>
         </view>
