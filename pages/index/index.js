@@ -1,8 +1,12 @@
 
 let app = getApp()
+
+import {getUrlParams} from '../../utils/util'
 const buyInfo = {}
 Page({
   data: {
+    changeTableTip: false,
+    tableCode: '',
     showCartPop: false,
     dishList: [
       { id: 1, name: "东北羊肉", price: 28.0, image: "/image/order-active.png", count: 0 },
@@ -28,8 +32,15 @@ Page({
     }
   },
 
-  onLoad() {
+  onLoad(options) {
+    console.log(`options`)
+    console.log(options)
     this.getClassDataList()
+    if (options.tableCode) {
+      this.setData({
+        tableCode: options.tableCode
+      })
+    }
   },
 
   // 获取分类数据列表
@@ -122,6 +133,50 @@ Page({
     this.getDishesByCategory(item.id)
   },
 
+  // 点击微信扫码
+  scanQRcode() {
+    wx.scanCode({
+      success: (res) => {
+        const { path } = res
+        // 获取url里面的参数
+        const params = getUrlParams(path)
+        if (params.tableCode) {
+          this.setData({
+            tableCode: params.tableCode
+          })
+        } else {
+          wx.showToast({
+            title: '请扫描桌面上的二维码',
+            icon: 'none'
+          })
+        }
+        
+        console.log(getUrlParams(path))
+      }
+    })
+  },
+
+  // 点击换桌
+  userChangeTable () {
+    this.setData({
+      changeTableTip: true
+    })
+  },
+
+  // 取消换桌
+  cancelChangeTable () {
+    this.setData({
+      isChangeTable: false
+    })
+  },
+
+  // 确认换桌
+  confirmChangeTable () {
+    this.setData({
+      isChangeTable: false
+    })
+    this.scanQRcode()
+  },
 
   hideCartPop () {
     this.setData({

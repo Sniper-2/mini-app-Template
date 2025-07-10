@@ -187,6 +187,34 @@
   font-weight: 600;
 }
 
+/* 换桌位的提示内容 */
+.tips-content {
+  padding: 60rpx 40rpx;
+  color: #343434;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.footer-btn-container {
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx 40rpx 40rpx;
+}
+.footer-btn-container .footer-btn {
+  flex: 1;
+  border-radius: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #595E66;
+  background: #EEF2F7;
+}
+.footer-btn-container .footer-btn + .footer-btn {
+  color: white;
+  background: #ff4d4f;
+  margin-left: 30rpx;
+}
+
 
 .container {
   background-color: #f8f8f8;

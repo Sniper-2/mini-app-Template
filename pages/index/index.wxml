@@ -1,7 +1,11 @@
 <view class="container">
-  <view class="table-info">
-    <view class="table-number">大堂 D46桌</view>
-    <view class="change-table">换桌位</view>
+  <view class="table-info" wx:if="{{tableCode}}">
+    <view class="table-number">大堂 {{ tableCode }}桌</view>
+    <view class="change-table" bind:tap="userChangeTable">换桌位</view>
+  </view>
+  <view class="table-info" wx:else>
+    <view class="table-number">请扫码点餐</view>
+    <view class="change-table" bind:tap="scanQRcode">扫码</view>
   </view>
 
   <view class="menu-container">
@@ -65,5 +69,18 @@
     <!-- 你要显示的内容 -->
   </view>
 </van-popup>
+
+<!-- 换桌提示 -->
+ <van-dialog
+  use-slot
+  showConfirmButton="{{ false }}"
+  show="{{ changeTableTip }}"
+  bind:close="onClose">
+  <view class="tips-content">如果您已经点单完成，请不要更换您的桌位，我们将尽快为您上餐</view>
+  <view class="footer-btn-container">
+    <view class="footer-btn" bind:tap="cancelChangeTable">取消</view>
+    <view class="footer-btn" bind:tap="confirmChangeTable">换桌</view>
+  </view>
+</van-dialog>
 
 

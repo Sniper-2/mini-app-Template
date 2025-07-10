@@ -14,6 +14,23 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function getUrlParams(url) {
+  if (!url) return {}
+  const params = {}
+  const queryString = url.split('?')[1]
+  if (!queryString) return params
+
+  queryString.split('&').forEach(pair => {
+    const [key, value] = pair.split('=')
+    if (key) {
+      params[decodeURIComponent(key)] = decodeURIComponent(value || '')
+    }
+  })
+  return params
+}
+
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getUrlParams: getUrlParams
 }
