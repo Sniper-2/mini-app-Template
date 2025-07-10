@@ -215,6 +215,77 @@
   margin-left: 30rpx;
 }
 
+/* 购物车商品列表 */
+.popup-content {
+  background: white;
+
+}
+.popup-content .cart-popup-title {
+  background: #eeeeee;
+  font-size: 26rpx;
+}
+.popup-content .cart-popup-title .clear-cart {
+  display: inline-block;
+  padding: 20rpx 40rpx;
+  padding-left: 20rpx;
+}
+.popup-content .cart-popup-title .clear-cart text + text {
+  margin-left: 10rpx;
+}
+.popup-content .cart-popup-product-container {
+  padding: 60rpx 20rpx;
+  padding-top: 40rpx;
+  max-height: 50vh;
+  overflow: scroll;
+}
+.popup-content .cart-popup-product-container .cart-popup-item {
+  display: flex;
+  align-items: center;
+}
+.popup-content .cart-popup-product-container .cart-popup-item + .cart-popup-item {
+  margin-top: 40rpx;
+}
+.popup-content .cart-popup-product-container .cart-popup-item .product-number {
+  flex: 1;
+  text-align: right;
+}
+.popup-content .cart-popup-product-container .cart-popup-item .product-number .product-price {
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+.popup-content .cart-popup-product-container .cart-popup-item .product-number .iconfont-container {
+  display: inline-block;
+  height: 60rpx;
+  width: 60rpx;
+  background: #f2f3f5;
+  border-radius: 10rpx;
+  position: relative;
+}
+.popup-content .cart-popup-product-container .cart-popup-item .product-number .iconfont {
+  font-size: 30rpx;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-content .cart-popup-product-container .cart-popup-item .product-number .buy-number-contauiner {
+  display: inline-block;
+  margin: 0 6rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  min-width: 80rpx;
+  text-align: center;
+  background: #f2f3f5;
+  border-radius: 10rpx;
+  color: #c8c9cc;
+}
+.popup-content .cart-popup-product-container .cart-popup-item .product-name {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
 
 .container {
   background-color: #f8f8f8;
@@ -290,4 +361,7 @@
   font-size: 28rpx;
   color: var(--primary-color);
   padding: 0 10rpx;
+}
+.middle {
+  vertical-align: middle;
 }

@@ -17,10 +17,7 @@
         class="class-item {{ item.isSelect ? 'select-class-item' : '' }}" wx:for="{{ classList }}" wx:key="id">
         {{ item.name }}
       </view>
-      <!-- <view class="class-item">小桃又有</view>
-      <view class="class-item">小桃又有</view>
-      <view class="class-item">小桃又有</view>
-      <view class="class-item">小桃又有</view> -->
+      
     </scroll-view>
     <scroll-view scroll-y="{{true}}" class="right-menu-container">
       <view class="menu-item" wx:for="{{ dishList }}" wx:key="key">
@@ -52,7 +49,7 @@
       </view>
       <view class="order-total-price">
         <text >￥</text>
-        <text class="order-price">99.99</text>
+        <text class="order-price">{{ totalPrice }}</text>
       </view>
     </view>
     <view class="cart-button">选好了</view>
@@ -66,7 +63,36 @@
   bind:close="hideCartPop"
 >
   <view class="popup-content">
-    <!-- 你要显示的内容 -->
+    <view class="cart-popup-title">
+      <view class="clear-cart" bind:tap="clearCart">
+        <text class="iconfont middle icon-shanchu"></text>
+        <text class="middle">清空购物车</text>
+      </view>
+    </view>
+    <view class="cart-popup-product-container">
+      <view class="cart-popup-item" wx:for="{{ cartData }}">
+        <view class="product-name">{{ item.name }}</view>
+        <view class="product-number">
+          <text class="middle product-price">￥{{ item.price }}</text>
+          <view class="iconfont-container middle" 
+            data-index="{{ index }}"
+            data-item="{{ item }}" 
+            bind:tap="reduceProduct">
+            <text class="iconfont icon-jianshao"></text>
+          </view>
+          <view class="buy-number-contauiner">
+            <text class="user-buy-number">{{ item.buyNumber }}</text>
+          </view>
+          <view class="iconfont-container middle"
+            data-index="{{ index }}"
+            data-item="{{ item }}"
+            bind:tap="addProduct">
+            <text class="iconfont icon-jia"></text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
   </view>
 </van-popup>
 

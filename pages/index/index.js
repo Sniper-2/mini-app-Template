@@ -2,9 +2,10 @@
 let app = getApp()
 
 import {getUrlParams} from '../../utils/util'
-const buyInfo = {}
+let buyInfo = {}
 Page({
   data: {
+    totalPrice: '0.00',
     changeTableTip: false,
     tableCode: '',
     showCartPop: false,
@@ -33,8 +34,6 @@ Page({
   },
 
   onLoad(options) {
-    console.log(`options`)
-    console.log(options)
     this.getClassDataList()
     if (options.tableCode) {
       this.setData({
@@ -102,17 +101,91 @@ Page({
     },() => {
       this.calculateTotalStock()
     })
-    console.log(this.data.cartData)
 
   },
 
+  // 计算总商品数量
   calculateTotalStock() {
     const total = this.data.cartData.reduce((sum, item) => sum + item.buyNumber, 0);
-    console.log(`total`)
-    console.log(total)
     this.setData({
       totalStock: total
     });
+    this.calculateTotalPrice()
+  },
+
+  // 计算总金额数量
+  calculateTotalPrice() {
+    const total = this.data.cartData.reduce((sum, item) => sum + item.buyNumber * item.price, 0);
+    this.setData({
+      totalPrice: total.toFixed(2)
+    });
+  },
+
+  // 购物车添加商品
+  addProduct (e) { 
+    const index = e.currentTarget.dataset.index;
+    const item = e.currentTarget.dataset.item;
+    buyInfo[item.id] = buyInfo[item.id] + 1
+    const cartData = this.data.cartData;
+    cartData[index].buyNumber = buyInfo[item.id]
+
+    const dishList = this.data.dishList;
+    dishList.map(v => {
+      if (v.id === item.id) {
+        v.buyNumber = buyInfo[item.id]
+      }
+    })
+    this.setData({
+      cartData,
+      dishList
+    }, () => {
+      this.calculateTotalStock();
+    });
+  },
+
+  // 购物车减少商品
+  reduceProduct (e) { 
+    const index = e.currentTarget.dataset.index;
+    const item = e.currentTarget.dataset.item;
+    buyInfo[item.id] = buyInfo[item.id] - 1
+    const cartData = this.data.cartData;
+    if (buyInfo[item.id] <= 0) {
+      cartData.splice(index, 1);
+    } else {
+      cartData[index].buyNumber = buyInfo[item.id]
+    }
+
+    const dishList = this.data.dishList;
+    dishList.map(v => {
+      if (v.id === item.id) {
+        v.buyNumber = buyInfo[item.id] || 0
+      }
+    })
+    this.setData({
+      cartData,
+      dishList,
+      showCartPop: cartData.length === 0 ? false : true
+    }, () => {
+      this.calculateTotalStock();
+    });
+  },
+
+  // 清空购物车
+  clearCart () { 
+    buyInfo = {};
+
+    this.setData({
+      cartData: [],
+      showCartPop: false,
+      totalPrice: 0,
+      totalNum: 0,
+      dishList: this.data.dishList.map(val => {
+        return {
+          ...val,
+          buyNumber: 0
+        }
+      })
+    })
   },
 
 
@@ -185,8 +258,14 @@ Page({
   },
 
   showCartInfo () {
+    if(this.data.cartData.length == 0) {
+      return wx.showToast({
+        title: '请先加购商品吧~',
+        icon: 'none'
+      })
+    }
     this.setData({
-      showCartPop: true
+      showCartPop: this.data.showCartPop ? false : true
     })
   }
 });
